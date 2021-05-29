@@ -1,0 +1,87 @@
+{
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
+		{
+			"type": "Container",
+			"items": [
+				
+				{
+					"type": "ColumnSet",
+					"columns": [
+						{
+							"type": "Column",
+							"width": "auto",
+							"items": [
+								{
+									"type": "Image",
+									"url": "https://www.parker.com/parkerimages/Parker.com/Controlled%20Documents/Support/Support%20Category%20images/literature-documents1.gif",
+									"size": "small",
+									"style": "person"
+								}
+							]
+						},
+						{
+							"type": "Column",
+							"width": "stretch",
+							"items": [
+								{
+									"type": "TextBlock",
+									"text": "{{title_s}}",
+									"weight": "bolder",
+									"wrap": true
+								},
+								{
+									"type": "TextBlock",
+									"spacing": "none",
+									"text": "{{supportType_ssi}}",
+									"isSubtle": true,
+									"wrap": true
+								},
+                {
+									"type": "TextBlock",
+									"spacing": "none",
+									"text": "{{supportResourceTypeEN_ssi}}",
+									"isSubtle": true,
+									"wrap": true
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "Container",
+			"items": [
+				{
+					"type": "TextBlock",
+					"text": "{{descriptionEN_t}}",
+					"wrap": true
+				},
+				{
+					"type": "FactSet",
+					"facts": [
+						{
+							"title": "Created Date:",
+							"value": "{{DATE({{createCiDate_dt}},SHORT)}}"
+						},
+						{
+							"title": "Published Date:",
+							"value": "{{DATE({{lastCiPublishDate_dt}},SHORT)}}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"actions": [
+		
+		{
+			"type": "Action.OpenUrl",
+			"title": "View",
+			"url": "https://adaptivecards.io"
+		}
+	]
+}
